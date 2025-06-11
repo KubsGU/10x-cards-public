@@ -150,3 +150,10 @@ export type ListGenerationsResponseDTO = GenerationDTO[];
 
 // DTO for retrieving details of a specific AI generation session
 export type GetGenerationDetailsResponseDTO = GenerationDTO;
+
+export interface User {
+  id: string;
+  email: string;
+  createdAt: string;
+  updatedAt: string;
+}

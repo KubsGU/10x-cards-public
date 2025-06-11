@@ -1,0 +1,17 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { PracticeView } from "@/components/views/practice/PracticeView";
+---
+
+<Layout title="Nauka - 10x Cards">
+  <div class="space-y-6">
+    <div class="space-y-2">
+      <h1 class="text-3xl font-bold">Nauka</h1>
+      <p class="text-muted-foreground">
+        Przesuwaj karty w prawo (lubię) lub w lewo (nie lubię), aby ocenić swój poziom znajomości materiału
+      </p>
+    </div>
+
+    <PracticeView client:load />
+  </div>
+</Layout>

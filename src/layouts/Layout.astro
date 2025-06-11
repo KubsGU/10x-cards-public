@@ -1,24 +1,31 @@
 ---
-import "../styles/global.css";
+import { Toaster } from "@/components/ui/sonner";
+import { Navbar } from "@/components/layout/Navbar";
+import "@/styles/globals.css";
 
 interface Props {
-  title?: string;
+  title: string;
 }
 
-const { title = "10x Astro Starter" } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="10x Cards - Twórz fiszki z pomocą AI" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body class="min-h-screen bg-background text-foreground">
+    <Navbar client:load />
+    <main class="container mx-auto px-4 pb-20 pt-4 md:pb-4 md:pt-20">
+      <slot />
+    </main>
+    <Toaster richColors closeButton position="top-right" />
   </body>
 </html>
 

@@ -1,0 +1,17 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { FlashcardsList } from "@/components/views/flashcards/FlashcardsList";
+---
+
+<Layout title="Twoje fiszki - 10x Cards">
+  <div class="space-y-6">
+    <div class="flex items-center justify-between">
+      <div class="space-y-1">
+        <h1 class="text-3xl font-bold">Twoje fiszki</h1>
+        <p class="text-muted-foreground">Przeglądaj i zarządzaj swoimi fiszkami</p>
+      </div>
+    </div>
+
+    <FlashcardsList client:load />
+  </div>
+</Layout>
